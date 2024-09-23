@@ -5,13 +5,13 @@ Features
 Room Booking: Book and cancel conference rooms for a specific time and duration.
 Occupancy Detection: Detects room occupancy and automatically controls lights and air conditioning based on occupancy.
 Automatic Room Release: Automatically releases room bookings if unoccupied for more than 5 minutes.
+
 Design Patterns Used
 Singleton Pattern: Ensures that there is only one instance of the office configuration.
 Observer Pattern: Monitors changes in room occupancy and triggers actions (lights, AC).
 Command Pattern: Encapsulates room booking and cancellation as commands to allow for easy extension and modification.
+
 Project Structure
-bash
-Copy code
 /src
   ├── Main.java                 # Entry point of the application
   ├── OfficeConfig.java          # Singleton for managing global office configuration
@@ -21,30 +21,25 @@ Copy code
   ├── CancelBookingCommand.java  # Command class for canceling bookings
   ├── Command.java               # Interface for command operations
   └── OccupancyObserver.java     # Observer interface for monitoring room occupancy
+  
 Getting Started
 Prerequisites
 Java 8 or higher installed.
+
 Steps to Run Locally
-Clone the repository:
 
-bash
-Copy code
-git clone https://github.com/YOUR-USERNAME/SmartOfficeFacility.git
-Navigate to the project directory:
+1.Clone the repository:
+git clone https://github.com/YOUR-USERNAME/SmartOffice.git
 
-bash
-Copy code
+2.Navigate to the project directory:
 cd SmartOfficeFacility/src
-Compile the Java files:
 
-bash
-Copy code
+3.Compile the Java files:
 javac *.java
-Run the program:
 
-bash
-Copy code
+4.Run the program:
 java Main
+
 Usage Examples
 Positive Cases
 Configure Rooms:
@@ -67,10 +62,12 @@ Input: Add occupant 1 0
 Output:
 Room 1 is now unoccupied.
 AC and lights turned off.
+
 Error Handling
 Invalid Room Number: If a room ID is not valid, the system returns an error.
 Time Format Validation: The system checks that time inputs are in HH:mm format.
 Booking Conflicts: The system prevents double bookings for the same room at the same time.
+
 Technologies Used
 Java: Core programming language.
 Java Util Logging: Used for logging events such as turning on lights and air conditioning.
